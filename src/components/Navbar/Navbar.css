@@ -1,0 +1,131 @@
+/** @format */
+
+.Top_bar {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100vw;
+  height: 100px;
+  left: 0px;
+  top: 0px;
+  background: #0e151d;
+  border-bottom: 1px solid #fbfbfb;
+}
+
+.connectwalletBTN {
+  position: absolute;
+  width: 250px;
+  height: 55px;
+  right: 20px;
+  top: 30px;
+  background: #0e151d;
+  border: 1px solid #fbfbfb;
+  border-radius: 20px;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.leftBar {
+  box-sizing: border-box;
+  position: absolute;
+  width: 364px;
+  height: 100vh;
+  left: 0px;
+  top: 100px;
+  background: #0e151d;
+  border-right: 1px dotted #fbfbfb;
+}
+
+.Myprofile_button_ {
+  position: absolute;
+  width: max-content;
+  height: 36px;
+  left: 73px;
+  top: 100px;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 36px;
+  color: #ffffff;
+  border: none;
+  background: none;
+}
+.Nfts_button_ {
+  position: absolute;
+  width: max-content;
+  height: 36px;
+  left: 73px;
+  top: 170px;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  color: #ffffff;
+  border: none;
+  background: none;
+}
+.Staking_btn {
+  position: absolute;
+  width: max-content;
+  height: 36px;
+  left: 73px;
+  top: 240px;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  color: #ffffff;
+  border: none;
+  background: none;
+}
+
+.logo {
+  position: absolute;
+  width: 162px;
+  height: 55px;
+  left: 53px;
+  top: 29px;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 55px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 500px) {
+  .logo {
+    position: absolute;
+    width: 162px;
+    height: 55px;
+    left: 5%;
+    top: 29px;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 55px;
+    color: #ffffff;
+  }
+  .connectwalletBTN {
+    position: absolute;
+    width: 180px;
+    height: 55px;
+    right: 20px;
+    top: 29px;
+    background: #0e151d;
+    border: 1px solid #fbfbfb;
+    border-radius: 20px;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 55px;
+    color: #ffffff;
+  }
+}
