@@ -16,10 +16,10 @@ const ResellNfts = () => {
       <div className="resellNFT_Area">
         <div className="resell_container">
           <div className="lets_resell"></div>
-          <div className="lets_resell_previousPrice">Previous price : </div>
+          <div className="lets_resell_previousPrice">Previous price { `:${null}`}</div>
           <button className="resellBTN">Resell</button>
           <div className="lets_resell_updatePrice">
-            update price
+            update price<br/>
             <input
               type="text"
               placeholder="new nft price"

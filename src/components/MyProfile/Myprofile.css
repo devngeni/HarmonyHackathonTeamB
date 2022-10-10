@@ -507,18 +507,17 @@
     height: 100vh;
     left: 0px;
     background: #0e151d;
-    overflow-y: hidden;
   }
   .resellNFT_Area {
     box-sizing: border-box;
     position: absolute;
     width: 100%;
-    height: 575px;
+    height: 305px;
     left: 0px;
     top: 330px;
     background: #0e151d;
     border-top: 1px dotted #fbfbfb;
-    overflow: auto;
+    overflow: scroll;
   }
   .walletBal {
     box-sizing: border-box;
@@ -625,5 +624,93 @@
     background: none;
     border: none;
     color: #ffffff;
+  }
+  /* ===============resell================ */
+
+  .lets_resell {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    top: 5px;
+    background: #d9d9d9;
+    border-radius: 10px;
+  }
+
+  resell_container {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    top: 50px;
+    overflow: scroll;
+  }
+  .lets_resell_previousPrice {
+    position: absolute;
+    width: max-content;
+    height: 36px;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    top: 210px;
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 36px;
+    color: #fbfbfb;
+  }
+  .resellBTN {
+    position: absolute;
+    width: 200px;
+    height: 36px;
+    left: 50.4%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    top: 340px;
+    border: 0ch;
+    color: #d9d9d9;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    background: #1453f5;
+    border-radius: 10px;
+  }
+  .lets_resell_updatePrice {
+    position: absolute;
+    width: max-content;
+    height: 100px;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    top: 245px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 36px;
+    color: #fbfbfb;
+  }
+  .priceUpdate_input {
+    position: relative;
+    width: 200px;
+    height: 35px;
+    left: 1px;
+    top: 3px;
+    border: 0ch;
+    color: gray;
+    outline: 0ch;
+    border-radius: 10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    background: #d9d9d9;
+    text-align: center;
   }
 }
