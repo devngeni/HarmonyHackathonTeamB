@@ -163,6 +163,7 @@ const Collection = () => {
           })}
         </div>
       </div>
+
       <NftsBar />
     </section>
   );

@@ -23,7 +23,7 @@
   width: 180px;
   height: 169px;
   left: 50px;
-  top: 30px;
+  top: 100px;
   border-radius: 50%;
   text-align: center;
 }
@@ -41,7 +41,7 @@
   width: max-content;
   height: 36px;
   left: 75px;
-  top: 180px;
+  top: 240px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
@@ -497,5 +497,133 @@
     background: none;
     border: 0.3px dotted #d9d9d9;
     border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Page {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    background: #0e151d;
+    overflow-y: hidden;
+  }
+  .resellNFT_Area {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 575px;
+    left: 0px;
+    top: 330px;
+    background: #0e151d;
+    border-top: 1px dotted #fbfbfb;
+    overflow: auto;
+  }
+  .walletBal {
+    box-sizing: border-box;
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    right: 10px;
+    top: 125px;
+    background: #0e151d;
+    border: 1px solid #fbfbfb;
+    border-radius: 20px;
+  }
+  .wallet_icon {
+    position: absolute;
+    width: 180px;
+    height: 169px;
+    left: -25px;
+    top: 80px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  .wallet_icon_address {
+    position: relative;
+    width: max-content;
+    height: 36px;
+    left: 15px;
+    top: 230px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 36px;
+    color: #ffffff;
+  }
+
+  .walletBal_Networth {
+    position: relative;
+    width: max-content;
+    height: 30px;
+    left: 10px;
+    top: 3px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 36px;
+    color: #ffffff;
+  }
+  .walletBal_alance {
+    position: relative;
+    width: max-content;
+    height: 36px;
+    left: 10px;
+    top: 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 36px;
+    color: #ffffff;
+  }
+  .walletBal_reloadBL {
+    box-sizing: border-box;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    font-size: 27px;
+    color: #d9d9d9;
+    text-align: center;
+  }
+  .yournftBTN {
+    position: absolute;
+    width: max-content;
+    height: 36px;
+    left: 20px;
+    top: 280px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    background: none;
+    border: none;
+    color: #ffffff;
+  }
+  .TxHistory {
+    position: absolute;
+    width: max-content;
+    height: 36px;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    top: 280px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    background: none;
+    border: none;
+    color: #ffffff;
   }
 }

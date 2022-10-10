@@ -9,15 +9,16 @@ const Yournfts = () => {
   return (
     <section id="yournfts">
       <Myprofile />
-      <Leftbar />
-      <Navbar />
+
       <div className="resellNFT_Area">
-        <div className="myNFT">         
-            <NavLink activeclassname="active" to="/reselling">
-               <button className="listbtn">List</button>
-            </NavLink>
+        <div className="myNFT">
+          <NavLink activeclassname="active" to="/reselling">
+            <button className="listbtn">List</button>
+          </NavLink>
         </div>
       </div>
+      <Leftbar />
+      <Navbar />
     </section>
   );
 }

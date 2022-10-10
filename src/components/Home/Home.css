@@ -1,10 +1,18 @@
 /** @format */
 
 .Page {
-  position: relative;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   background: #0e151d;
+}
+
+.page_content {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #0e151d;
+  overflow: scroll;
 }
 
 .ExploreTxt {
@@ -30,13 +38,56 @@
   background: #d9d9d9;
   border-radius: 20px;
 }
+.Explore_button {
+  position: absolute;
+  height: 40px;
+  width: 250px;
+  left: 10%;
+  top: 63%;
+  background: blue;
+  border: none;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #ffffff;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1600px) {
+  .Explore_button {
+    position: absolute;
+    height: 40px;
+    width: 250px;
+    left: 13%;
+    top: 70%;
+    background: blue;
+    border: none;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #ffffff;
+    border-radius: 10px;
+  }
+  .specialImage {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 100px;
+    top: 23%;
+    background: #d9d9d9;
+    border-radius: 20px;
+  }
+}
 
 @media screen and (max-width: 1400px) {
   .ExploreTxt {
     position: absolute;
     width: max-content;
     height: 295px;
-    left: 100px;
+    left: 10%;
     top: 38%;
     font-family: "Saira Stencil One";
     font-style: normal;
@@ -53,6 +104,22 @@
     top: 23%;
     background: #d9d9d9;
     border-radius: 20px;
+  }
+  .Explore_button {
+    position: absolute;
+    height: 40px;
+    width: 250px;
+    left: 10%;
+    top: 70%;
+    background: blue;
+    border: none;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    color: #ffffff;
+    border-radius: 10px;
   }
 }
 
@@ -81,6 +148,23 @@
     background: #d9d9d9;
     border-radius: 20px;
   }
+  .Explore_button {
+    position: absolute;
+    height: 40px;
+    width: 250px;
+    left: 20%;
+    transform: translate(-50%);
+    top: 420px;
+    background: blue;
+    border: none;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    color: #ffffff;
+    border-radius: 10px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -108,6 +192,23 @@
     background: #d9d9d9;
     border-radius: 20px;
   }
+  .Explore_button {
+    position: absolute;
+    height: 40px;
+    width: 250px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 740px;
+    background: blue;
+    border: none;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    color: #ffffff;
+    border-radius: 10px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -117,7 +218,7 @@
     height: 295px;
     left: 50%;
     transform: translate(-50%);
-    top: 150px;
+    top: 120px;
     font-family: "Saira Stencil One";
     font-style: normal;
     font-weight: 400;
@@ -127,12 +228,29 @@
   }
   .specialImage {
     position: absolute;
-    width: 290px;
-    height: 290px;
+    width: 250px;
+    height: 250px;
     left: 50%;
     transform: translate(-50%);
-    top: 320px;
+    top: 300px;
     background: #d9d9d9;
     border-radius: 20px;
+  }
+  .Explore_button {
+    position: absolute;
+    height: 36px;
+    width: 250px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 570px;
+    background: blue;
+    border: none;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 35px;
+    color: #ffffff;
+    border-radius: 10px;
   }
 }

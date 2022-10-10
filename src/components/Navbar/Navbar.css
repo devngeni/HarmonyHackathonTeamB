@@ -10,7 +10,16 @@
   background: #0e151d;
   border-bottom: 1px solid #fbfbfb;
 }
-
+.leftBar {
+  box-sizing: border-box;
+  position: absolute;
+  width: 364px;
+  height: 100vh;
+  left: 0px;
+  top: 100px;
+  background: #0e151d;
+  border-right: 1px dotted #fbfbfb;
+}
 .connectwalletBTN {
   position: absolute;
   width: 250px;
@@ -25,17 +34,6 @@
   font-weight: 400;
   font-size: 26px;
   color: #ffffff;
-}
-
-.leftBar {
-  box-sizing: border-box;
-  position: absolute;
-  width: 364px;
-  height: 100vh;
-  left: 0px;
-  top: 100px;
-  background: #0e151d;
-  border-right: 1px dotted #fbfbfb;
 }
 
 .Myprofile_button_ {
@@ -127,5 +125,8 @@
     font-size: 15px;
     line-height: 55px;
     color: #ffffff;
+  }
+  .leftBar {
+   display: none;
   }
 }

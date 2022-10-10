@@ -35,12 +35,12 @@ const Mint = () => {
             placeholder="nft description"
             className="forms_container_description_textarea"
           />
-          {/*<div className="forms_container_price">Price</div>
+          <div className="forms_container_price">Price</div>
           <input
             type="text"
-            placeholder="nftname"
-            className="forms_container_nftname_input"
-          />*/}
+            placeholder="price"
+            className="forms_container_price_input"
+          />
           <div className="select_nft">
             Select file
             <br />
