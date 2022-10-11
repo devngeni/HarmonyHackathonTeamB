@@ -234,25 +234,36 @@
 }
 
 .forms_container_price {
+  position: relative;
   width: 72px;
   height: 36px;
   left: 10px;
-  top: 555px;
+  top: 297px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 36px;
   color: #ffffff;
 }
 
-.forms_container_price input {
-  position: absolute;
-  width: 546px;
-  height: 64px;
-  left: 704px;
-  top: 596px;
-  background: #d9d9d9;
+.forms_container_price_input {
+  position: relative;
+    width: 83%;
+    height: 35px;
+    left: 10px;
+    top: 295px;
+    background: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: gray;
+    resize: none;
+    text-align: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: large;
+    line-height: 36px;
 }
 
 .select_nft {
@@ -260,7 +271,7 @@
   width: max-content;
   height: 36px;
   left: 10px;
-  top: 300px;
+  top: 370px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -274,7 +285,7 @@
   width: 500px;
   height: 45px;
   left: 10px;
-  top: 400px;
+  top: 450px;
   background: #1453f5;
   border: none;
   color: #ffffff;
@@ -520,7 +531,7 @@
     color: #ffffff;
   }
   /* ================mint page==================== */
-.forms_container_price {
+  .forms_container_price {
     position: relative;
     width: 72px;
     height: 36px;
@@ -540,7 +551,7 @@
     left: 10px;
     top: 256px;
     background: #d9d9d9;
-     outline: none;
+    outline: none;
     border: none;
     border-radius: 10px;
     color: gray;
@@ -550,9 +561,8 @@
     font-style: normal;
     font-size: large;
     line-height: 36px;
-    
   }
-   .select_nft {
+  .select_nft {
     position: absolute;
     width: max-content;
     height: 36px;
@@ -565,7 +575,7 @@
     line-height: 36px;
     color: #ffffff;
   }
-    .mintButton {
+  .mintButton {
     position: absolute;
     width: 500px;
     height: 45px;
@@ -817,7 +827,7 @@
     left: 10px;
     top: 256px;
     background: #d9d9d9;
-     outline: none;
+    outline: none;
     border: none;
     border-radius: 10px;
     color: gray;
@@ -827,7 +837,6 @@
     font-style: normal;
     font-size: large;
     line-height: 36px;
-    
   }
   .select_nft {
     position: absolute;

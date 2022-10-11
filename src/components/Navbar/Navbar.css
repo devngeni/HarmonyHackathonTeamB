@@ -1,5 +1,14 @@
 /** @format */
 
+.menu {
+  display: none;
+}
+.drawerBar {
+  display: none;
+}
+
+/* ================== */
+
 .Top_bar {
   box-sizing: border-box;
   position: absolute;
@@ -13,13 +22,18 @@
 .leftBar {
   box-sizing: border-box;
   position: absolute;
-  width: 364px;
-  height: 100vh;
-  left: 0px;
+  min-width: 364px;
+  min-height: 90%;
+  max-height: fit-content;
+  max-width: fit-content;
+  resize: horizontal;
+  overflow: scroll;
+  /* left: 0px; */
   top: 100px;
   background: #0e151d;
   border-right: 1px dotted #fbfbfb;
 }
+
 .connectwalletBTN {
   position: absolute;
   width: 250px;
@@ -101,7 +115,9 @@
     position: absolute;
     width: 162px;
     height: 55px;
-    left: 5%;
+    left: 35%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
     top: 29px;
     font-family: "Saira Stencil One";
     font-style: normal;
@@ -127,6 +143,27 @@
     color: #ffffff;
   }
   .leftBar {
-   display: none;
+    display: none;
+  }
+  .menu {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    left: 10%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    top: 36px;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #ffffff;
+    background: none;
+    border: 0ch;
+  }
+  .drawerBar {
+    position: relative;
+    background: #0e151d;
+    margin-top: 100px;
   }
 }
