@@ -16,11 +16,12 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        
+        <Route path="" element={<Home />} />
         <Route path="/Myprofile/*" element={<NavigateTo />} />
-        <Route path="yournfts" element={<Yournfts />} />
-        <Route path="txhistory" element={<TxHistory />} />
-        <Route path="reselling" element={<ResellNfts />} />
+        <Route path="/yournfts" element={<Yournfts />} />
+        <Route path="/txhistory" element={<TxHistory />} />
+        <Route path="/reselling" element={<ResellNfts />} />
         <Route path="/collections" element={<Collection />} />
         <Route path="/Mintnfts" element={<Mint />} />
       </Routes>

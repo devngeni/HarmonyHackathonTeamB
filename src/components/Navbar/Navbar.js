@@ -24,31 +24,39 @@ const Navbar = () => {
     fetchData();
   }, []);
 
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
+ 
 
   return (
     <div className="Top_bar">
       <div className="logo">THE_NFTS</div>
-      <button className="menu" onClick={toggleDrawer}>
-        <ImMenu />
-      </button>
+
       <div>
+        <button className="menu" onClick={toggleDrawer}>
+          <ImMenu />
+        </button>
         <Drawer
           open={isOpen}
           onClose={toggleDrawer}
           direction="left"
-          className="drawerBar"
+          className="drawer"
         >
-          <button>Hello World</button>
-          <br />
-          <button>Hello World</button>
-          <br />
-          <button>Hello World</button>
-          <br />
-          <button>Hello World</button>
+          <div className="drawerBar">
+            <button className="buttons">
+              <a href="/myprofile">My profile</a>
+            </button>
+            <br />
+            <button className="button1">
+              <a href="/collections">Nfts</a>
+            </button>
+            <br />
+            <button className="button2">
+              <a href="">Stakings</a>
+            </button>
+          </div>
         </Drawer>
       </div>
 

@@ -21,7 +21,7 @@ const Leftbar = () => {
         </NavLink>
       </button>
       <button className="Staking_btn">
-        <NavLink activeclassname="activebtn" to="/">
+        <NavLink activeclassname="activebtn" to="/f">
           <GiCash /> Stakings
         </NavLink>
       </button>
