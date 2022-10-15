@@ -6,11 +6,14 @@
     "@react-icons/all-files": "^4.1.0",
     "avataaars": "^2.0.0",
     "ethers": "^5.7.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "ipfs-car": "^0.9.1",
+    "nft.storage": "^7.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-modern-drawer": "^1.1.2",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "4.0.1"
+    "react-scripts": "4.0.3",
+    "web3": "^1.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
