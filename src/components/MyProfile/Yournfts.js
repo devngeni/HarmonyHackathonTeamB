@@ -56,8 +56,6 @@ const Yournfts = () => {
     setLoadingState("loaded");
   }
 
-  // if (loadingState === "loaded" && !nfts.length)
-  //   return <h1 className="loadingstate">No NFTs listed</h1>;
   return (
     <section id="yournfts">
       <Myprofile />

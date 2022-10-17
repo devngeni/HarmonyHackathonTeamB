@@ -9,6 +9,7 @@ import Myprofile from "./Myprofile";
 import NFTMarketplace from "../../Marketplace.json";
 import "./Myprofile.css";
 import Spinner from "./Spinner";
+import { toast } from "react-toastify";
 
 const ResellNfts = () => {
   const [formInput, updateFormInput] = useState({ price: "", image: "" });
@@ -77,7 +78,7 @@ const ResellNfts = () => {
       }, 2000);
     } catch (error) {
       setBusy(false);
-      alert(error.code);
+      toast.error(error.code);
     }
   }
 

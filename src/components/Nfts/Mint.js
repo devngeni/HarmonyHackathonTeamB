@@ -5,11 +5,11 @@ import Leftbar from "../Navbar/LeftBar";
 import Navbar from "../Navbar/Navbar";
 import "./nfts.css";
 import NftsBar from "./NftsBar";
-
 import Marketplace from "../../Marketplace.json";
 import { ethers } from "ethers";
 import { NFTStorage, File } from "nft.storage";
 import Spinner from "../MyProfile/Spinner";
+import { toast } from "react-toastify";
 const NEW_TOKEN_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDViOTg4Q0U4NjZBMkQxNTZmNDI5QTcwZDQ5OWExNDM3NmIwNERBOGMiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2MjczNDAxMDk1MSwibmFtZSI6ImNvaW5iYXNlbmZ0In0._E1KnvPg0cJ44QtGx8LN-ZwoZ6CaxkCWybUiOFknVkw";
 
@@ -53,7 +53,7 @@ const Mint = () => {
       console.log("metadata.json with IPFS gateway URLs:\n", metadata.embed());
       return metadata.url;
     } catch (error) {
-      alert(error);
+      toast.error(error);
       setIPFSerror(error);
     } finally {
       setIPFSuploading(false);
@@ -80,17 +80,15 @@ const Mint = () => {
           value: listingPrice,
         }
       );
-      alert(
-        "Please wait.. minting may take upto 5 mins for complete transaction"
-      );
+      toast.info("...minting has started");
       await transaction.wait();
       updateFormParams({ name: "", description: "", price: "" });
-      selectedFile===null;
-      alert("Mint Successfull !");
+      selectedFile === null;
+      toast.success("Mint Successfull !");
       setBusy(false);
     } catch (error) {
       if (error) {
-        alert("failed " + error.message);
+        toast.error("failed " + error.code).toLowerCase();
         setBusy(false);
       }
     }
@@ -100,18 +98,18 @@ const Mint = () => {
     const { name, description, price } = formParams;
 
     if (!name) {
-      return alert("NFT Name should not be empty");
+      return toast.warn("NFT Name should not be empty");
     } else if (!description) {
-      return alert("NFT Description should not be empty");
+      return toast.warn("NFT Description should not be empty");
     } else if (!selectedFile) {
-      return alert("Select a file to upload");
+      return toast.warn("Select a file to upload");
     } else if (!price) {
-      return alert("price should be included");
+      return toast.warn("price should be included");
     }
 
     try {
       if (formParams.price < 0.01) {
-        alert("minimum price is 0.01");
+        toast.warn("minimum price is 0.01");
       } else {
         const url = await IPFSupload(
           {
@@ -124,23 +122,21 @@ const Mint = () => {
         await MintNfts(url);
       }
     } catch (error) {
-      if (error) {
-        alert("failed " + error.message);
-        setBusy(false);
-      }
+      toast.error("failed " + error.code).toLowerCase();
+      setBusy(false);
     }
   }
 
   useEffect(() => {
     if (IPFSuploading) {
       setBusy(true);
-      alert("Uploading NFT data To IPFS");
+      toast.info("Uploading");
     }
   }, [IPFSuploading]);
 
   useEffect(() => {
     if (IPFSerror) {
-      alert(IPFSerror.message);
+      toast.error(IPFSerror.code);
       setBusy(false);
     }
   }, [IPFSerror]);

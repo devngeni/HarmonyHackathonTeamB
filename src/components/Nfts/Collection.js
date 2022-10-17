@@ -10,21 +10,9 @@ import NFTMarketplace from "../../Marketplace.json";
 import { useParams } from "react-router-dom";
 import Spinner from "../MyProfile/Spinner";
 import Loader from "../../utils/Loader";
+import { toast } from "react-toastify";
 
 const Collection = () => {
-  const sampleData = [
-    {
-      name: "samudrop",
-      description: "NFT artwork",
-      website: "http://axieinfinity.io",
-      image:
-        "https://nftstorage.link/ipfs/bafybeibjo5wcxf7o5m5san7c6lvhrwszwbbffnlnrdjnmwuvocmc7j4nfa/samudrop.png",
-      price: "0.03",
-      currentlySelling: "True",
-      address: "0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-  ];
-
   const [busy, setBusy] = useState(false);
   const [currAddress, updateCurrAddress] = useState("0x");
   const [dataFetched, updateDataFetched] = useState(false);
@@ -83,7 +71,6 @@ const Collection = () => {
     updateCurrAddress(accounts[0].toUpperCase());
     updateDataFetched(true);
     setLoadingState(true);
-
   }
 
   async function buyNft(nft) {
@@ -104,9 +91,10 @@ const Collection = () => {
       });
       await transaction.wait();
       loadNFTs();
+      toast.success("transaction successful");
       setBusy(false);
     } catch (error) {
-      alert(error.code);
+      toast.error(error.code);
       setBusy(false);
     }
   }

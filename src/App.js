@@ -10,13 +10,13 @@ import ResellNfts from "./components/MyProfile/ResellNfts";
 import NavigateTo from "./NavigateTo";
 import Collection from "./components/Nfts/Collection";
 import Mint from "./components/Nfts/Mint";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        
         <Route path="" element={<Home />} />
         <Route path="/Myprofile/*" element={<NavigateTo />} />
         <Route path="/yournfts" element={<Yournfts />} />
@@ -25,8 +25,13 @@ const App = () => {
         <Route path="/collections" element={<Collection />} />
         <Route path="/Mintnfts" element={<Mint />} />
       </Routes>
+      <ToastContainer
+        theme="colored"
+        style={{ overflowWrap: "anywhere" }}
+        position="bottom-right"
+      />
     </div>
   );
-}
+};
 
-export default App
+export default App;
