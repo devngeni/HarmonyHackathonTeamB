@@ -2,7 +2,7 @@
 
 import { ethers } from "ethers";
 import React, { useState } from "react";
-import {  useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Leftbar from "../Navbar/LeftBar";
 import Navbar from "../Navbar/Navbar";
 import Myprofile from "./Myprofile";
@@ -50,28 +50,35 @@ const ResellNfts = () => {
   }
 
   async function listNFTForSale(tokenId) {
-    if (!price) return;
-    setBusy(true);
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
+    try {
+      if (!price) return;
+      setBusy(true);
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
 
-    const priceFormatted = ethers.utils.parseEther(formInput.price.toString());
-    let contract = new ethers.Contract(
-      NFTMarketplace.address,
-      NFTMarketplace.abi,
-      signer
-    );
-    let listingPrice = await contract.getListingPrice();
+      const priceFormatted = ethers.utils.parseEther(
+        formInput.price.toString()
+      );
+      let contract = new ethers.Contract(
+        NFTMarketplace.address,
+        NFTMarketplace.abi,
+        signer
+      );
+      let listingPrice = await contract.getListingPrice();
 
-    listingPrice = listingPrice.toString();
-    let transaction = await contract.resellToken(tokenId, priceFormatted, {
-      value: listingPrice,
-    });
-    await transaction.wait();
-    setBusy(false);
-    setTimeout(function () {
-      window.location.href = "/yournfts";
-    }, 2000);
+      listingPrice = listingPrice.toString();
+      let transaction = await contract.resellToken(tokenId, priceFormatted, {
+        value: listingPrice,
+      });
+      await transaction.wait();
+      setBusy(false);
+      setTimeout(function () {
+        window.location.href = "/yournfts";
+      }, 2000);
+    } catch (error) {
+      setBusy(false);
+      alert(error.code);
+    }
   }
 
   const search = useLocation().search;

@@ -143,6 +143,19 @@
   }
 }
 
+.Loader {
+  color: #0f8cdf;
+  animation: reload_spin infinite 2s linear;
+}
+@keyframes reload_spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .yournftBTN {
   position: absolute;
   width: max-content;

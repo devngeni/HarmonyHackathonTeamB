@@ -9,6 +9,7 @@ import NftsBar from "./NftsBar";
 import NFTMarketplace from "../../Marketplace.json";
 import { useParams } from "react-router-dom";
 import Spinner from "../MyProfile/Spinner";
+import Loader from "../../utils/Loader";
 
 const Collection = () => {
   const sampleData = [
@@ -28,6 +29,8 @@ const Collection = () => {
   const [currAddress, updateCurrAddress] = useState("0x");
   const [dataFetched, updateDataFetched] = useState(false);
   const [data, setData] = useState([]);
+  const [loadingState, setLoadingState] = useState(false);
+
   useEffect(() => {
     loadNFTs();
   }, []);
@@ -50,6 +53,8 @@ const Collection = () => {
      *  map over items returned from smart contract and format
      *  them as well as fetch their token metadata
      */
+    setLoadingState(true);
+
     const items = await Promise.all(
       data.map(async (i) => {
         const tokenURI = await contract.tokenURI(i.tokenId);
@@ -77,6 +82,8 @@ const Collection = () => {
     setData(items);
     updateCurrAddress(accounts[0].toUpperCase());
     updateDataFetched(true);
+    setLoadingState(true);
+
   }
 
   async function buyNft(nft) {
@@ -112,25 +119,33 @@ const Collection = () => {
       <Leftbar />
       <Navbar />
       <div className="NFTS_page">
-        <div className="content">
-          {data.map((nft, index) => (
-            <div key={index} className="nftcard">
-              <img src={nft.image} alt={nft.name} className="N_F_T" />
-              <div className="nftcard_price">{nft.price} ONE </div>
-              <div className="nftcard_name">{nft.name}</div>
+        {!loadingState ? (
+          <button className="loader_spinner">
+            <Loader />
+          </button>
+        ) : (
+          <div className="content">
+            {data.map((nft, index) => (
+              <div key={index} className="nftcard">
+                <img src={nft.image} alt={nft.name} className="N_F_T" />
+                <div className="nftcard_price">{nft.price} ONE </div>
+                <div className="nftcard_name">{nft.name}</div>
 
-              {currAddress === nft.owner || currAddress === nft.seller ? (
-                <button className="nftcard_buyNft">You own this</button>
-              ) : (
-                <button className="nftcard_buyNft" onClick={() => buyNft(nft)}>
-                  {busy ? <Spinner /> : "Buy"}
-                </button>
-              )}
-            </div>
-          ))}
-        </div>
+                {currAddress === nft.owner || currAddress === nft.seller ? (
+                  <button className="nftcard_buyNft">You own this</button>
+                ) : (
+                  <button
+                    className="nftcard_buyNft"
+                    onClick={() => buyNft(nft)}
+                  >
+                    {busy ? <Spinner /> : "Buy"}
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-
       <NftsBar />
     </section>
   );

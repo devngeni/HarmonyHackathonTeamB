@@ -1,7 +1,7 @@
 /** @format */
 
 .loadingstate {
-  position: relative;
+  position: absolute;
   color: #d9d9d9;
   width: max-content;
   left: 50%;
@@ -9,6 +9,21 @@
   transform: translateY(-50%);
   transform: translateX(-50%);
   font-style: italic;
+}
+
+.loader_spinner {
+  position: relative;
+  color: #3b0fda;
+  width: 200px;
+  height: 200px;
+  left: 55%;
+  top: 30%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  font-weight: 400;
+  font-size: 50px;
+  background: 0;
+  border: 0;
 }
 
 .bar {
@@ -877,5 +892,19 @@
     font-size: 22px;
     line-height: 36px;
     border-radius: 10px;
+  }
+  .loader_spinner {
+    position: absolute;
+    color: #3b0fda;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 30%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    font-weight: 400;
+    font-size: 50px;
+    background: 0;
+    border: 0;
   }
 }
