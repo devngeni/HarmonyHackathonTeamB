@@ -70,7 +70,7 @@ const ResellNfts = () => {
     await transaction.wait();
     setBusy(false);
     setTimeout(function () {
-      window.location.href = "/collections";
+      window.location.href = "/yournfts";
     }, 2000);
   }
 
@@ -97,7 +97,7 @@ const ResellNfts = () => {
           </div>
 
           <button className="resellBTN" onClick={() => listNFTForSale(tokenId)}>
-            {busy ? <Spinner /> : "Re-sell"}
+            {busy ? <Spinner /> : "re-sell"}
           </button>
           <div className="lets_resell_updatePrice">
             update price

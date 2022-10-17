@@ -1,5 +1,16 @@
 /** @format */
 
+.loadingstate {
+  position: relative;
+  color: #d9d9d9;
+  width: max-content;
+  left: 50%;
+  top: 5%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  font-style: italic;
+}
+
 .bar {
   position: absolute;
   width: 1550px;
@@ -139,7 +150,7 @@
   left: 50%;
   transform: translateY(-50%);
   transform: translateX(-50%);
-  background: #1453f5;
+  background: #1c2a50;
   border: none;
   font-family: "Inter";
   font-style: normal;
@@ -249,21 +260,21 @@
 
 .forms_container_price_input {
   position: relative;
-    width: 83%;
-    height: 35px;
-    left: 10px;
-    top: 295px;
-    background: #ffffff;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    color: gray;
-    resize: none;
-    text-align: center;
-    font-family: "Inter";
-    font-style: normal;
-    font-size: large;
-    line-height: 36px;
+  width: 83%;
+  height: 35px;
+  left: 10px;
+  top: 295px;
+  background: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: gray;
+  resize: none;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: large;
+  line-height: 36px;
 }
 
 .select_nft {
@@ -428,7 +439,7 @@
     left: 50%;
     transform: translateY(-50%);
     transform: translateX(-50%);
-    background: #1453f5;
+    background: #1c2a50;
     border: none;
     font-family: "Inter";
     font-style: normal;
@@ -719,7 +730,7 @@
     left: 50%;
     transform: translateY(-50%);
     transform: translateX(-50%);
-    background: #1453f5;
+    background: #1c2a50;
     border: none;
     font-family: "Inter";
     font-style: normal;

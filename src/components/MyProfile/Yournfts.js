@@ -55,27 +55,31 @@ const Yournfts = () => {
     setNfts(items);
     setLoadingState("loaded");
   }
-  
+
   // if (loadingState === "loaded" && !nfts.length)
-  //   return <h1 className="py-10 px-20 text-3xl">No NFTs owned</h1>;
+  //   return <h1 className="loadingstate">No NFTs listed</h1>;
   return (
     <section id="yournfts">
       <Myprofile />
 
       <div className="resellNFT_Area">
-        <div className="my_content">
-          {nfts.map((nft, i) => (
-            <div key={i} className="myNFT">
-              <img src={nft.image} alt={nft.name} className="list_nft" />
-              <NavLink
-                activeclassname="active"
-                to={`/reselling?tokenId=${nft.tokenId}&tokenURI=${nft.image}`}
-              >
-                <button className="listbtn">List</button>
-              </NavLink>
-            </div>
-          ))}
-        </div>
+        {loadingState === "loaded" && !nfts.length ? (
+          <h5 className="loadingstate">No items at the moment!!</h5>
+        ) : (
+          <div className="my_content">
+            {nfts.map((nft, i) => (
+              <div key={i} className="myNFT">
+                <img src={nft.image} alt={nft.name} className="list_nft" />
+                <NavLink
+                  activeclassname="active"
+                  to={`/reselling?tokenId=${nft.tokenId}&tokenURI=${nft.image}`}
+                >
+                  <button className="listbtn">resell token</button>
+                </NavLink>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <Leftbar />
       <Navbar />

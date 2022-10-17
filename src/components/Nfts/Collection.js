@@ -27,7 +27,7 @@ const Collection = () => {
   const [busy, setBusy] = useState(false);
   const [currAddress, updateCurrAddress] = useState("0x");
   const [dataFetched, updateDataFetched] = useState(false);
-  const [data, setData] = useState(sampleData);
+  const [data, setData] = useState([]);
   useEffect(() => {
     loadNFTs();
   }, []);
@@ -46,7 +46,6 @@ const Collection = () => {
       provider
     );
     const data = await contract.fetchMarketItems();
-
     /*
      *  map over items returned from smart contract and format
      *  them as well as fetch their token metadata
@@ -76,7 +75,6 @@ const Collection = () => {
       })
     );
     setData(items);
-    // setLoadingState("loaded");
     updateCurrAddress(accounts[0].toUpperCase());
     updateDataFetched(true);
   }

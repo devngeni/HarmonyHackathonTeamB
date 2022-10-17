@@ -60,7 +60,7 @@ const Navbar = () => {
         >
           <div className="drawerBar">
             <button className="buttons">
-              <a href="/myprofile">My profile</a>
+              <a href="/yournfts">My profile</a>
             </button>
             <br />
             <button className="button1">
