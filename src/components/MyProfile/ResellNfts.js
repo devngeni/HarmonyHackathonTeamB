@@ -50,11 +50,14 @@ const ResellNfts = () => {
     }
   }
 
+  /*=============reading from the current location link================*/
   const search = useLocation().search;
   const tokenId = new URLSearchParams(search).get("tokenId");
   const previousPrice = new URLSearchParams(search).get("tokenprice");
-  const tokenUrl = new URLSearchParams(search).get("tokenUrl").replace("#", "%23");
- 
+  const tokenUrl = new URLSearchParams(search)
+    .get("tokenUrl")
+    .replace("#", "%23");
+
   return (
     <section id="reselling">
       <Myprofile />
