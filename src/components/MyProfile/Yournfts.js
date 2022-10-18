@@ -62,7 +62,7 @@ const Yournfts = () => {
 
       <div className="resellNFT_Area">
         {loadingState === "loaded" && !nfts.length ? (
-          <h5 className="loadingstate">you haven't n bought any item recently!!</h5>
+          <h5 className="loadingstate">no items to display!!</h5>
         ) : (
           <div className="my_content">
             {nfts.map((nft, i) => (
@@ -70,7 +70,7 @@ const Yournfts = () => {
                 <img src={nft.image} alt={nft.name} className="list_nft" />
                 <NavLink
                   activeclassname="active"
-                  to={`/reselling?tokenId=${nft.tokenId}&tokenURI=${nft.image}`}
+                  to={`/reselling?tokenId=${nft.tokenId}&tokenprice=${nft.price}&tokenUrl=${nft.image}`}
                 >
                   <button className="listbtn">resell token</button>
                 </NavLink>
