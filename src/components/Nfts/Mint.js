@@ -97,19 +97,13 @@ const Mint = () => {
   async function mintNFThandler() {
     const { name, description, price } = formParams;
 
-    if (!name) {
-      return toast.warn("NFT Name should not be empty");
-    } else if (!description) {
-      return toast.warn("NFT Description should not be empty");
-    } else if (!selectedFile) {
-      return toast.warn("Select a file to upload");
-    } else if (!price) {
-      return toast.warn("price should be included");
+    if (!name || !description || !selectedFile || !price) {
+      return toast.warn("all field are required");
     }
 
     try {
       if (formParams.price < 0.01) {
-        toast.warn("minimum price is 0.01");
+        toast.error("minimum price is 0.01");
       } else {
         const url = await IPFSupload(
           {
