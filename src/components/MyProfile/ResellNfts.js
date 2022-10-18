@@ -49,6 +49,7 @@ const ResellNfts = () => {
       toast.error(error.code);
     }
   }
+  console.log(window.ethereum.networkVersion, "window.ethereum.networkVersion");
 
   /*=============reading from the current location link================*/
   const search = useLocation().search;

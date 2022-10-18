@@ -13,12 +13,6 @@ const Navbar = () => {
   const [address, setAddress] = useState();
   // const [network, setNetwork] = useState();
 
-
-  // const toHex = (num) => {
-  //   const val = Number(num);
-  //   return "0x" + val.toString(16);
-  // };
-
   useEffect(() => {
     async function fetchData() {
       const items = await connectWallet();
@@ -27,13 +21,6 @@ const Navbar = () => {
           "..." +
           String(items.address).substring(40)
       );
-      // setNetwork(network);
-      //  if (address && network !== 5) {
-      //    await library.provider.request({
-      //      method: "wallet_switchEthereumChain",
-      //      params: [{ chainId: toHex(5) }],
-      //    });
-      //  }
     }
     fetchData();
   }, []);
@@ -42,7 +29,6 @@ const Navbar = () => {
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
- 
 
   return (
     <div className="Top_bar">
