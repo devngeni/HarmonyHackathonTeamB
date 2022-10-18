@@ -1,9 +1,11 @@
 <!-- @format -->
 
-# solving issues:
+# To run:
 
 ```shell
 npm install --force
+
+npm start
 ```
 
 # trouble shooting
