@@ -22,16 +22,16 @@
 }
 
 .list_nft {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    background: #d9d9d9;
-    transition: transform 0.6s ease all;
-    transform-style: preserve-3d;
-    border-radius: 10px;
-  }
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: #d9d9d9;
+  transition: transform 0.6s ease all;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
 
 .profile_content {
   position: absolute;
@@ -215,7 +215,7 @@
 .listbtn {
   position: absolute;
   color: #d9d9d9;
-  background: #1c2a50;;
+  background: #1c2a50;
   bottom: -10px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -307,7 +307,7 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 36px;
-  background: #1c2a50;;
+  background: #1c2a50;
   border-radius: 10px;
 }
 
@@ -424,7 +424,7 @@
     font-weight: 300;
     font-size: 22px;
     line-height: 36px;
-    background: #1c2a50;;
+    background: #1c2a50;
     border-radius: 10px;
   }
   /* ===================== */
@@ -546,18 +546,18 @@
   .resellNFT_Area {
     box-sizing: border-box;
     position: absolute;
-    width: 1000px;
+    width: 80%;
     height: 305px;
-    left: 364px;
+    left: 270px;
     top: 330px;
     background: #0e151d;
     border-top: 1px dotted #fbfbfb;
   }
   .Page {
     position: fixed;
-    width: 74vw;
+    width: 80%;
     height: 100vh;
-    left: 364px;
+    left: 270px;
     background: #0e151d;
   }
   .my_content {
@@ -763,7 +763,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
-    background:#1c2a50;;
+    background: #1c2a50;
     border-radius: 10px;
   }
   .lets_resell_updatePrice {

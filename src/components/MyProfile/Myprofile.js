@@ -52,7 +52,7 @@ const Myprofile = () => {
   return (
     <section id="Myprofile">
       <div className="Page">
-        <div className="">
+        <div>
           <div className="wallet_icon">
             <div className="avater">
               <Avatar

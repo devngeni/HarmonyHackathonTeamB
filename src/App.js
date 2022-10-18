@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/Mintnfts" element={<Mint />} />
       </Routes>
       <ToastContainer
-        position="bottom-center"
+        position="top-center"
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}

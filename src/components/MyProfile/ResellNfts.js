@@ -73,6 +73,7 @@ const ResellNfts = () => {
       });
       await transaction.wait();
       setBusy(false);
+      toast.success("resold successfuly");
       setTimeout(function () {
         window.location.href = "/yournfts";
       }, 2000);

@@ -62,7 +62,7 @@ const Yournfts = () => {
 
       <div className="resellNFT_Area">
         {loadingState === "loaded" && !nfts.length ? (
-          <h5 className="loadingstate">No items at the moment!!</h5>
+          <h5 className="loadingstate">you haven't n bought any item recently!!</h5>
         ) : (
           <div className="my_content">
             {nfts.map((nft, i) => (

@@ -7,7 +7,7 @@ import Navbar from "../Navbar/Navbar";
 import "./nfts.css";
 import NftsBar from "./NftsBar";
 import NFTMarketplace from "../../Marketplace.json";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import Spinner from "../MyProfile/Spinner";
 import Loader from "../../utils/Loader";
 import { toast } from "react-toastify";
@@ -17,7 +17,6 @@ const Collection = () => {
   const [currAddress, updateCurrAddress] = useState("0x");
   const [dataFetched, updateDataFetched] = useState(false);
   const [data, setData] = useState([]);
-  const [loadingState, setLoadingState] = useState(false);
 
   useEffect(() => {
     loadNFTs();
@@ -36,19 +35,19 @@ const Collection = () => {
       NFTMarketplace.abi,
       provider
     );
-    const data = await contract.fetchMarketItems();
+    const marketItems = await contract.fetchMarketItems();
     /*
      *  map over items returned from smart contract and format
      *  them as well as fetch their token metadata
      */
-    setLoadingState(true);
-
     const items = await Promise.all(
-      data.map(async (i) => {
+      marketItems.map(async (i) => {
         const tokenURI = await contract.tokenURI(i.tokenId);
         const imageUri = tokenURI.slice(7);
-        const data = await fetch(`https://nftstorage.link/ipfs/${imageUri}`);
-        const json = await data.json();
+        const metadata = await fetch(
+          `https://nftstorage.link/ipfs/${imageUri}`
+        );
+        const json = await metadata.json();
         const str = json.image;
         const mylink = str.slice(7);
         const imageX =
@@ -70,7 +69,6 @@ const Collection = () => {
     setData(items);
     updateCurrAddress(accounts[0].toUpperCase());
     updateDataFetched(true);
-    setLoadingState(true);
   }
 
   async function buyNft(nft) {
@@ -107,11 +105,11 @@ const Collection = () => {
       <Leftbar />
       <Navbar />
       <div className="NFTS_page">
-        {!loadingState ? (
+        {!dataFetched ? (
           <button className="loader_spinner">
             <Loader />
           </button>
-        ) : (
+        ) : dataFetched && data.length ? (
           <div className="content">
             {data.map((nft, index) => (
               <div key={index} className="nftcard">
@@ -132,6 +130,17 @@ const Collection = () => {
               </div>
             ))}
           </div>
+        ) : dataFetched && !data.length ? (
+          <button className="itemsfound">
+            No market Items to display!!, <br />
+            you may mint new items or
+            <br /> resell from{" "}
+            <NavLink className={"itemsfound_color"} to="/yournfts">
+              My-profile
+            </NavLink>
+          </button>
+        ) : (
+          ""
         )}
       </div>
       <NftsBar />
