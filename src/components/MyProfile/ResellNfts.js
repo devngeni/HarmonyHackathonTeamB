@@ -40,6 +40,7 @@ const ResellNfts = () => {
       });
       await transaction.wait();
       setBusy(false);
+      toast.success("resold successfully");
       setTimeout(function () {
         window.location.href = "/yournfts";
       }, 2000);
@@ -52,7 +53,7 @@ const ResellNfts = () => {
   const search = useLocation().search;
   const tokenId = new URLSearchParams(search).get("tokenId");
   const previousPrice = new URLSearchParams(search).get("tokenprice");
-  const tokenUrl = new URLSearchParams(search).get("tokenUrl");
+  const tokenUrl = new URLSearchParams(search).get("tokenUrl").replace("#", "%23");
  
   return (
     <section id="reselling">
