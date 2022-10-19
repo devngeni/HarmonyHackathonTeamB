@@ -1,20 +1,8 @@
 {
-  "name": "harmonynft",
-  "version": "0.1.0",
-  "private": true,
+  "name": "hardhat-project",
   "dependencies": {
-    "@react-icons/all-files": "^4.1.0",
-    "avataaars": "^2.0.0",
-    "ethers": "^5.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.0.1",
-    "react-scripts": "0.9.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "@openzeppelin/contracts": "^4.7.3",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.1"
   }
 }
