@@ -7,24 +7,14 @@ async function main() {
 
   console.log("Deployer:", deployer.address);
 
-  //Token contract address
+//   console.log("Account balance:", (await deployer.getBalance()).toString());
+
   const harmonFactory = await ethers.getContractFactory("Harmony");
 
   const harmonyToken = await harmonFactory.deploy();
 
   await harmonyToken.deployed();
-
   console.log("Token Contract deployed to address:", harmonyToken.address);
-
-  console.log("Account balance:", (await deployer.getBalance()).toString());
-
-  //Staking contract addresss
-  const StakingRewards = await ethers.getContractFactory("StakeHarmony");
-
-  const staking = await StakingRewards.deploy(harmonyToken.address);
-
-  await staking.deployed();
-  console.log("Staking Contract deployed to address:", staking.address);
   
 }
 
