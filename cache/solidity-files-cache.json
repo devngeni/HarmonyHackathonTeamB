@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/ted/Documents/Projects/nGeni.ioGit/Harmony/Harmony/contracts/Staking.sol": {
-      "lastModificationDate": 1666260539722,
-      "contentHash": "15a684debf797ce39ee451dec6a7254c",
+      "lastModificationDate": 1666276991859,
+      "contentHash": "efabc968ed2f54fb596c753dc86eb161",
       "sourceName": "contracts/Staking.sol",
       "solcConfig": {
         "version": "0.8.7",

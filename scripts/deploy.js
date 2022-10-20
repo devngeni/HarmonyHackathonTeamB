@@ -11,7 +11,7 @@ async function main() {
 
   const StakingRewards = await ethers.getContractFactory("StakeHarmony");
 
-  const staking = await StakingRewards.deploy();
+  const staking = await StakingRewards.deploy(deployer.address);
 
   await staking.deployed();
   console.log("Contract deployed to address:", staking.address);

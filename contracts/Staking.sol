@@ -117,8 +117,6 @@ contract StakeHarmony is Pausable, Ownable, ReentrancyGuard {
         return stakeInfos[_msgSender()].endTS;
     }
  
-
-
     function pause() external onlyOwner {
         _pause();
     }
@@ -126,4 +124,6 @@ contract StakeHarmony is Pausable, Ownable, ReentrancyGuard {
     function unpause() external onlyOwner {
         _unpause();
     }
+
+    //Delegate Call - structure has to be same
 }
