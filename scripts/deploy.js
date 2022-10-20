@@ -1,12 +1,13 @@
 const { ethers } = require("hardhat");
 const hre = require("hardhat");
 
+
 async function main() {
-  // const [deployer] = await ethers.getSigners();
+  const [deployer] = await ethers.getSigners();
 
-  // console.log("Deployed contracts with the accounts:", deployer.address);
+  console.log("Deployed contracts with the accounts:", deployer.address);
 
-  // console.log("Account balance:", (await deployer.getBalance()).toString());
+  console.log("Account balance:", (await deployer.getBalance()).toString());
 
   const StakingRewards = await ethers.getContractFactory("StakeHarmony");
 
