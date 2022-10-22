@@ -75,8 +75,7 @@ const Collection = () => {
     /* needs the user to sign the transaction, so will use Web3Provider and sign it */
     try {
       setBusy(true);
-      await Stake()
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+          const provider = new ethers.providers.Web3Provider(window.ethereum);
 
       const signer = provider.getSigner();
       const contract = new ethers.Contract(

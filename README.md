@@ -23,3 +23,5 @@ Cant resolve ipfs-car/blockstore/memory when importing nft.storage?
 -Inside token.js, update to this: import { pack } from 'ipfs-car/dist/esm/pack'
 
 -This solved my problem.
+
+
