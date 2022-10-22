@@ -1,5 +1,5 @@
 /** @format */
-
+import detectEthereumProvider from "@metamask/detect-provider";
 import React, { useEffect, useRef, useState } from "react";
 import Leftbar from "../Navbar/LeftBar";
 import Navbar from "../Navbar/Navbar";
@@ -62,7 +62,7 @@ const Mint = () => {
 
   const MintNfts = async (metadataURL) => {
     try {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const provider = await detectEthereumProvider();
       const signer = provider.getSigner();
 
       let contract = new ethers.Contract(
