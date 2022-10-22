@@ -1,0 +1,125 @@
+/** @format */
+
+.chainidBox {
+  position: relative;
+  width: 270px;
+  height: 200px;
+  background-color: #222733;
+  color: white;
+  border-radius: 4%;
+}
+
+.chainid_page {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 364px;
+  top: 100px;
+  background: #0e151d;
+  overflow: auto;
+  border-right: 1px solid white;
+}
+.content_ {
+    position: relative;
+    height: 84vh;
+    width: 100%;
+    background: #0e151d;
+    top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-left: 10px;
+    overflow-y: auto;
+  }
+@media screen and (max-width: 1400px) {
+  .content_ {
+    position: relative;
+    height: 71vh;
+    width: 100%;
+    background: #0e151d;
+    top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-left: 10px;
+    overflow-y: auto;
+  }
+  .chainid_page {
+    position: absolute;
+    width: 80%;
+    height: 80vh;
+    left: 274px;
+    top: 100px;
+    background: #0e151d;
+    overflow: auto;
+    border-right: 1px solid white;
+  }
+}
+
+
+
+.networkname {
+  position: absolute;
+  width: 160px;
+  top: 30px;
+  left: 53%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  color: rgb(240, 255, 252);
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.chain_id {
+  position: absolute;
+  top: 100px;
+  left: 90px;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  color: aliceblue;
+}
+
+.neticon {
+  position: absolute;
+  top: 20px;
+  left: 15%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  color: aliceblue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: none;
+}
+
+.currency {
+  position: absolute;
+  top: 100px;
+  right: -10px;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  color: aliceblue;
+}
+
+.nextline {
+  position: absolute;
+  top: 25px;
+  width: max-content;
+  height: 25px;
+  background: none;
+  color: rgb(21, 224, 224);
+  text-align: center;
+  /* border: 1px solid white;
+  border-radius: 4px; */
+}
+
+.link {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  color: aliceblue;
+}

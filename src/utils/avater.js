@@ -1,3 +1,4 @@
+
 const configs = {
   topType: [
     'NoHair',

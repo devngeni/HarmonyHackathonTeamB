@@ -8,6 +8,30 @@
   background: #0e151d;
   overflow-y: hidden;
 }
+.my_content {
+  position: relative;
+  height: 98%;
+  width: 100%;
+  background: #0e151d;
+  top: 5px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-left: 4px;
+  overflow-y: auto;
+}
+
+.list_nft {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: #d9d9d9;
+  transition: transform 0.6s ease all;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
 
 .profile_content {
   position: absolute;
@@ -119,12 +143,25 @@
   }
 }
 
+.Loader {
+  color: #0f8cdf;
+  animation: reload_spin infinite 2s linear;
+}
+@keyframes reload_spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .yournftBTN {
   position: absolute;
   width: max-content;
   height: 36px;
   left: 55px;
-  top: 455px;
+  top: 308px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
@@ -141,7 +178,7 @@
   width: max-content;
   height: 36px;
   left: 400px;
-  top: 455px;
+  top: 308px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
@@ -156,9 +193,9 @@
   box-sizing: border-box;
   position: absolute;
   width: 1556px;
-  height: 575px;
+  height: 65%;
   left: 364px;
-  top: 505px;
+  top: 350px;
   background: #0e151d;
   border-top: 1px dotted #fbfbfb;
   overflow-y: scroll;
@@ -172,19 +209,19 @@
   top: 10px;
   background: none;
   border: 0.3px dotted #d9d9d9;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .listbtn {
   position: absolute;
   color: #d9d9d9;
-  background: blue;
-  bottom: 1px;
+  background: #1c2a50;
+  bottom: -10px;
   left: 50%;
   transform: translate(-50%, -50%);
   border: none;
-  border-radius: 20px;
-  width: 150px;
+  border-radius: 10px;
+  width: 80%;
   height: 40px;
 }
 
@@ -199,6 +236,19 @@
   background: #d9d9d9;
   border-radius: 10px;
 }
+
+.lets_resell_image {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  border-radius: 8px;
+
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+
 .lets_resell_previousPrice {
   position: absolute;
   width: max-content;
@@ -257,7 +307,7 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 36px;
-  background: #1453f5;
+  background: #1c2a50;
   border-radius: 10px;
 }
 
@@ -272,7 +322,32 @@
 }
 
 @media screen and (max-width: 1400px) {
-  /* ==========resell page=========== */
+  .list_nft {
+    position: absolute;
+    top: 0px;
+    width: 200px;
+    height: 240px;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background: #d9d9d9;
+    transition: transform 0.6s ease all;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+  }
+
+  .my_content {
+    position: relative;
+    height: 98%;
+    width: 100%;
+    background: #0e151d;
+    top: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin-left: 4px;
+    overflow-y: auto;
+  }
   .resell_container {
     position: relative;
     width: 800px;
@@ -349,7 +424,7 @@
     font-weight: 300;
     font-size: 22px;
     line-height: 36px;
-    background: #1453f5;
+    background: #1c2a50;
     border-radius: 10px;
   }
   /* ===================== */
@@ -471,21 +546,31 @@
   .resellNFT_Area {
     box-sizing: border-box;
     position: absolute;
-    width: 1000px;
-    height: 575px;
-    left: 364px;
+    width: 80%;
+    height: 305px;
+    left: 270px;
     top: 330px;
     background: #0e151d;
     border-top: 1px dotted #fbfbfb;
-    overflow: auto;
   }
   .Page {
     position: fixed;
-    width: 74vw;
+    width: 80%;
     height: 100vh;
-    left: 364px;
+    left: 270px;
     background: #0e151d;
-    overflow-y: hidden;
+  }
+  .my_content {
+    position: relative;
+    height: 98%;
+    width: 100%;
+    background: #0e151d;
+    top: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-left: 4px;
+    overflow-y: auto;
   }
 
   .myNFT {
@@ -512,7 +597,7 @@
     box-sizing: border-box;
     position: absolute;
     width: 100%;
-    height: 305px;
+    height: 55%;
     left: 0px;
     top: 330px;
     background: #0e151d;
@@ -639,7 +724,7 @@
     border-radius: 10px;
   }
 
-  resell_container {
+  .resell_container {
     position: relative;
     width: 100%;
     height: 80%;
@@ -678,7 +763,7 @@
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
-    background: #1453f5;
+    background: #1c2a50;
     border-radius: 10px;
   }
   .lets_resell_updatePrice {
@@ -712,5 +797,31 @@
     font-size: 18px;
     background: #d9d9d9;
     text-align: center;
+  }
+
+  .my_content {
+    position: relative;
+    height: 98%;
+    width: 100%;
+    background: #0e151d;
+    top: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin-left: 4px;
+    overflow-y: auto;
+  }
+  .list_nft {
+    position: absolute;
+    top: 0px;
+    width: 200px;
+    height: 240px;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background: #d9d9d9;
+    transition: transform 0.6s ease all;
+    transform-style: preserve-3d;
+    border-radius: 10px;
   }
 }

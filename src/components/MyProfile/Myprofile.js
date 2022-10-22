@@ -52,7 +52,7 @@ const Myprofile = () => {
   return (
     <section id="Myprofile">
       <div className="Page">
-        <div className="">
+        <div>
           <div className="wallet_icon">
             <div className="avater">
               <Avatar
@@ -66,7 +66,7 @@ const Myprofile = () => {
         </div>
         <div className="walletBal">
           <div className="walletBal_Networth">Net Worth</div>
-          <div className="walletBal_alance">{currentBalance} ETH</div>
+          <div className="walletBal_alance">{currentBalance} ONE</div>
           <button className="walletBal_reloadBL" onClick={getBalance}>
             {busy ? <Spinner /> : <AiOutlineReload />}
           </button>

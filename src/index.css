@@ -9,6 +9,8 @@ body {
   font-family: sans-serif;
   background: #0e151d;
   overflow-y: hidden;
+  /* opacity: 0;
+  transition: opacity 2s ease-in; */
 }
 
 .active {
@@ -16,14 +18,12 @@ body {
   color: #0669fc;
 }
 
-
 a {
   color: antiquewhite;
   text-decoration: none;
-
 }
 a:hover {
-   border-bottom: 5px solid #0669fc;
+  border-bottom: 5px solid #0669fc;
   color: #0669fc;
 }
 

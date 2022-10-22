@@ -1,5 +1,16 @@
 /** @format */
 
+.menu {
+  position: absolute;
+  left: -200px;
+}
+.drawer {
+  position: inherit;
+  left: -200px;
+}
+
+/* ================== */
+
 .Top_bar {
   box-sizing: border-box;
   position: absolute;
@@ -13,13 +24,18 @@
 .leftBar {
   box-sizing: border-box;
   position: absolute;
-  width: 364px;
-  height: 100vh;
-  left: 0px;
+  min-width: 364px;
+  min-height: 90%;
+  max-height: fit-content;
+  max-width: fit-content;
+  resize: horizontal;
+  overflow: scroll;
+  /* left: 0px; */
   top: 100px;
   background: #0e151d;
   border-right: 1px dotted #fbfbfb;
 }
+
 .connectwalletBTN {
   position: absolute;
   width: 250px;
@@ -82,6 +98,22 @@
   background: none;
 }
 
+.ChainBtn {
+  position: absolute;
+  width: max-content;
+  height: 36px;
+  left: 73px;
+  bottom: 10px;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  color: #ffffff;
+  border: none;
+  background: none;
+}
+
 .logo {
   position: absolute;
   width: 162px;
@@ -95,13 +127,62 @@
   line-height: 55px;
   color: #ffffff;
 }
+.ChainBtn {
+  position: absolute;
+  width: max-content;
+  height: 36px;
+  left: 73px;
+  top: 300px;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  color: #ffffff;
+  border: none;
+  background: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .leftBar {
+    box-sizing: border-box;
+    position: absolute;
+    min-width: 270px;
+    min-height: 90%;
+    max-height: fit-content;
+    max-width: fit-content;
+    resize: horizontal;
+    overflow: scroll;
+    /* left: 0px; */
+    top: 100px;
+    background: #0e151d;
+    border-right: 1px dotted #fbfbfb;
+  }
+  .ChainBtn {
+    position: absolute;
+    width: max-content;
+    height: 36px;
+    left: 73px;
+    top: 300px;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 36px;
+    color: #ffffff;
+    border: none;
+    background: none;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .logo {
     position: absolute;
     width: 162px;
     height: 55px;
-    left: 5%;
+    left: 35%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
     top: 29px;
     font-family: "Saira Stencil One";
     font-style: normal;
@@ -127,6 +208,100 @@
     color: #ffffff;
   }
   .leftBar {
-   display: none;
+    display: none;
+  }
+  .menu {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    left: 10%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    top: 36px;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #ffffff;
+    background: none;
+    border: 0ch;
+  }
+  .drawer {
+    position: relative;
+    margin-top: 100px;
+  }
+
+  .drawerBar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: #1d2b3b;
+    margin-top: 0px;
+  }
+
+  .buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background: none;
+    color: #fbfbfb;
+    border: none;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    width: 200px;
+    top: 100px;
+  }
+  .button1 {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background: none;
+    color: #fbfbfb;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    width: 200px;
+    top: 170px;
+  }
+  .button2 {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background: none;
+    color: #fbfbfb;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    width: 200px;
+    top: 240px;
+  }
+  .button3 {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background: none;
+    color: #fbfbfb;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    width: 200px;
+    top: 310px;
   }
 }
