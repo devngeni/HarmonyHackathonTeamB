@@ -1,7 +1,7 @@
-HARMONY NFT MARKETPLACE 
-NFT Marketplaceis a popular use case in the implementation of blockchain technology which raises the sale of NFTs art collection by digital artists.
+# HARMONY NFT MARKETPLACE 
+NFT Marketplace is a popular use case in the implementation of blockchain technology which raises the sale of NFTs art collection by digital artists.
 
-We came up with an implementation of the same using HArmony SDK whereby we integrated the functionalities of major NFT Marketplaces.
+We came up with an implementation of the same using Harmony SDK whereby we integrated the functionalities of major NFT Marketplaces.
 
 Our maketplace impelements major use cases of most NFT marketplaces.
 
