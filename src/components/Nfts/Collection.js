@@ -83,9 +83,7 @@ const Collection = () => {
         NFTMarketplace.abi,
         signer
       );
-
       const salePrice = ethers.utils.parseUnits(nft.price, "ether");
-
       const transaction = await contract.createMarketSale(nft.tokenId, {
         value: salePrice,
       });
@@ -98,7 +96,6 @@ const Collection = () => {
       setBusy(false);
     }
   }
-
   const params = useParams();
   const tokenId = params.tokenId;
   if (!dataFetched) loadNFTs(tokenId);

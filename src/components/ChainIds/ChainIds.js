@@ -17,7 +17,6 @@ const ChainIds = () => {
     const result = await response.json();
     const data = result.data;
     const item = data.items;
-    console.log(item);
     setData(item);
     setDataFetched(true);
     return item;
@@ -47,7 +46,7 @@ const ChainIds = () => {
               <label className="currency">
                 currency
                 <br />
-                <span className="nextline">___</span>
+                <span className="nextline">{null}</span>
               </label>
               <label className="link">
                 {chains.is_testnet === true ? "testnet" : "Mainnet"}

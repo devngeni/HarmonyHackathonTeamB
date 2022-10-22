@@ -21,7 +21,6 @@ export const connectWallet = async () => {
       method: "eth_requestAccounts",
     });
     const address = accounts[0];
-
     return { address };
   } catch (error) {
     console.log(error);
