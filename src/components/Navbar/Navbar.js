@@ -8,6 +8,7 @@ import { ImMenu } from "@react-icons/all-files/im/ImMenu";
 
 //import styles 👇
 import "react-modern-drawer/dist/index.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [address, setAddress] = useState();
@@ -45,17 +46,20 @@ const Navbar = () => {
           className="drawer"
         >
           <div className="drawerBar">
-            <button className="buttons">
-              <a href="/yournfts">My profile</a>
-            </button>
+            <NavLink activelassname="activebtn" to="/yournfts">
+              <button className="buttons">My profile</button>
+            </NavLink>
             <br />
-            <button className="button1">
-              <a href="/collections">Nfts</a>
-            </button>
             <br />
-            <button className="button2">
-              <a href="">Stakings</a>
-            </button>
+            <NavLink activelassname="activebtn" to="/collections">
+              <button className="button1">Nfts</button>
+            </NavLink>
+            {/*<button className="button2">
+            <a href="">Stakings</a>
+          </button>*/}
+            <NavLink activelassname="activebtn" to="/Chains">
+              <button className="button2">All chains data</button>
+            </NavLink>
           </div>
         </Drawer>
       </div>

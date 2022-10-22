@@ -4,6 +4,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./Home.css";
+import Logo from "./nft.jpeg";
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
             <button className="Explore_button">Explore</button>
           </NavLink>
 
-          <div className="specialImage"></div>
+          <img src={Logo} alt="here" className="specialImage"></img>
         </div>
       </div>
       <Navbar />
