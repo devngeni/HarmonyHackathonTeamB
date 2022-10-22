@@ -75,6 +75,7 @@ const Collection = () => {
     /* needs the user to sign the transaction, so will use Web3Provider and sign it */
     try {
       setBusy(true);
+      await Stake()
       const provider = new ethers.providers.Web3Provider(window.ethereum);
 
       const signer = provider.getSigner();
@@ -83,7 +84,9 @@ const Collection = () => {
         NFTMarketplace.abi,
         signer
       );
+
       const salePrice = ethers.utils.parseUnits(nft.price, "ether");
+
       const transaction = await contract.createMarketSale(nft.tokenId, {
         value: salePrice,
       });
@@ -96,6 +99,7 @@ const Collection = () => {
       setBusy(false);
     }
   }
+
   const params = useParams();
   const tokenId = params.tokenId;
   if (!dataFetched) loadNFTs(tokenId);
