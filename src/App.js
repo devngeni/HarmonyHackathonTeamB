@@ -12,6 +12,7 @@ import Collection from "./components/Nfts/Collection";
 import Mint from "./components/Nfts/Mint";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ChainIds from "./components/ChainIds/ChainIds";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/reselling" element={<ResellNfts />} />
         <Route path="/collections" element={<Collection />} />
         <Route path="/Mintnfts" element={<Mint />} />
+        <Route path="/Chains" element={<ChainIds />} />
       </Routes>
       <ToastContainer
         position="top-center"

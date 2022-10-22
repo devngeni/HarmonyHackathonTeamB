@@ -98,6 +98,22 @@
   background: none;
 }
 
+.ChainBtn {
+  position: absolute;
+  width: max-content;
+  height: 36px;
+  left: 73px;
+  bottom: 10px;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  color: #ffffff;
+  border: none;
+  background: none;
+}
+
 .logo {
   position: absolute;
   width: 162px;
@@ -110,6 +126,21 @@
   font-size: 30px;
   line-height: 55px;
   color: #ffffff;
+}
+.ChainBtn {
+  position: absolute;
+  width: max-content;
+  height: 36px;
+  left: 73px;
+  top: 300px;
+  font-family: "Saira Stencil One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  color: #ffffff;
+  border: none;
+  background: none;
 }
 
 @media screen and (max-width: 1400px) {
@@ -126,6 +157,21 @@
     top: 100px;
     background: #0e151d;
     border-right: 1px dotted #fbfbfb;
+  }
+  .ChainBtn {
+    position: absolute;
+    width: max-content;
+    height: 36px;
+    left: 73px;
+    top: 300px;
+    font-family: "Saira Stencil One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 36px;
+    color: #ffffff;
+    border: none;
+    background: none;
   }
 }
 

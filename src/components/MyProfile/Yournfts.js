@@ -34,6 +34,7 @@ const Yournfts = () => {
         const imageUri = tokenURI.slice(7);
         const data = await fetch(`https://nftstorage.link/ipfs/${imageUri}`);
         const json = await data.json();
+
         const str = json.image;
         const mylink = str.slice(7);
         const imageX =
@@ -42,7 +43,7 @@ const Yournfts = () => {
         let price = ethers.utils.formatUnits(i.price.toString(), "ether");
         let item = {
           price,
-          tokenId: i.tokenId.toNumber(),
+          tokenId: i.tokenId,
           seller: i.seller,
           owner: i.owner,
           image: imageX,
